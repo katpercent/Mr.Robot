@@ -8,7 +8,7 @@ class Mod(commands.Cog):
     def __init__(self, bot):
         self.bot = bot
 
-    @commands.command(name='clear', description="Clear un nombre de message définis.", help="Clear un nombre de message définis.")
+    @commands.command(name='clear', description="Clear a number of message.", help="Clear a number of message.")
     @commands.has_permissions(manage_messages=True)
     async def clear(self, ctx, amount=0):
         if amount > 0:
@@ -18,7 +18,7 @@ class Mod(commands.Cog):
             await asyncio.sleep(6)
             await success.delete()
 
-    @commands.command(name='ban', description="ban", help="t'es con ou quoi")
+    @commands.command(name='ban', description="ban", help="")
     @commands.has_permissions(ban_members = True)    
     async def ban(self, ctx, member : discord.Member, reason=None):
         try:
